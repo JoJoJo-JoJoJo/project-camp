@@ -4,6 +4,8 @@ import { registerCors } from "./plugins/cors.js";
 import { registerSwagger } from "./plugins/swagger.js";
 import { healthRoutes } from "./routes/health.js";
 import { v1Routes } from "./routes/v1/index.js";
+import { registerAuthPlugin } from "./plugins/auth.js";
+import { registerAuthHooksPlugin } from "./plugins/auth-hooks.js";
 
 export async function buildApp() {
 	const app = Fastify({
@@ -15,6 +17,10 @@ export async function buildApp() {
 	await app.register(sensible);
 	await registerCors(app);
 	await registerSwagger(app);
+
+	// Register auth
+	await registerAuthPlugin(app);
+	await registerAuthHooksPlugin(app);
 
 	// Root unversioned health check
 	await app.register(healthRoutes);
