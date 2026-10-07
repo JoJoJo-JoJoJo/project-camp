@@ -4,7 +4,7 @@
   "private": true,
   "exports": {
     ".": "./index.ts",
-    "./schema": "./schema.ts",
+    "./schema": "./src/schema/auth-schema.ts",
     "./types": "./types.ts"
   },
   "scripts": {
