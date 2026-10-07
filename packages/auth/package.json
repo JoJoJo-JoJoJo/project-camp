@@ -5,7 +5,8 @@
   "main": "./dist/index.js",
   "types": "./dist/index.js",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./client": "./src/lib/auth-client.ts"
   },
   "scripts": {},
   "dependencies": {
