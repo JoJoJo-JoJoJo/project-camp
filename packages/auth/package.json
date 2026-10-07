@@ -1,0 +1,20 @@
+{
+  "name": "@repo/auth",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.js",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {},
+  "dependencies": {
+    "@repo/db": "workspace:*",
+    "@better-auth/drizzle-adapter": "^1.7.7",
+    "better-auth": "^1.7.7"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "26.6.4"
+  }
+}
